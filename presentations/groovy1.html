@@ -1,0 +1,140 @@
+<!doctype html>  
+<html>
+	
+	<head>
+		<meta charset="utf-8">		
+		<title>Dynamisez votre code Java avec Groovy</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="lib/css/idea.css">
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h2>Dynamisez votre code Java avec</h2>
+					<input type="image" src="img/logo-groovy.png" style="width:400px"/>
+					<p style="margin-top:50px">Nicolas Noullet</p>
+					<p><b>Human Talks Toulouse</b></p>
+				</section>
+
+				<section>
+					<h2>Groovy</h2>
+					<p>2003</p>
+					<p>Open Source</p>
+					<input type="image" src="img/logo-springsource.gif"/>
+					<p>Français ?<p>
+				</section>
+
+				<section>
+					<h2>Et Java dans tout ça ?</h2>
+					<p>Java Virtual Machine
+					<p>Java Community Process</p>
+				</section>
+
+				<section>
+					<h2>Dynamique</h2>
+					<pre><code class="groovy">
+	def foo
+	foo = "bar"
+	foo += "baz"
+	assert foo == "barbaz"
+	foo = 1
+	foo ++
+	assert foo == 2
+				</code></pre>
+				</section>
+
+				<section>
+					<h2>Statique</h2> Wait, what?
+				</section>			
+
+				<section>
+					<h2>Fonctionnel ?</h2>
+				</section>		
+
+				<section>
+					<h2>Collections</h2>
+				</section>
+
+				<section>
+					<h2>Opérateurs</h2>
+				</section>
+
+				<section>
+					<h2>Riche</h2>
+					<p>Tests</p>
+					<p>Parsers &amp; Builders</p>
+					<p>Grapes</p>
+					<p>GPars</p>
+					<p>GContracts</p>
+				</section>
+
+				<section>
+					<h2>Agile</h2>
+					<p>Adaptable : dynamique, compatible, DSL</p>
+					<p>Simple : syntaxe légère, concepts simples</p>
+					<p>Productif</p>
+				</section>
+
+				<section>
+					<h2>Écosystème</h2>
+					<br/>
+					<input type="image" src="img/logo-grails.png"/><br/>
+					<input type="image" src="img/logo-griffon.png" style="width:250px"><br/>
+					<input type="image" src="img/logo-gradle.png" style="width:200px"><br/>
+					<p>Spock, Geb</p>
+					<p>&lt;insert any Java lib/framework here&gt;</p>
+				</section>
+
+				<section>
+					<h2>Lancez-vous !</h2>
+					<a href="http://groovy.codehaus.org/">http://groovy.codehaus.org/</a>
+				</section>
+
+				<section>
+					<h2>Merci :)</h2>
+					<input type="image" src="img/logo-kagilum.png" style="width:300px"/>
+					<br/>
+					<input type="image" src="img/logo-icescrum.png" style="width:285px;margin-top:-100px"/>
+					<p style="margin-top:-50px">@noullet</p>
+				</section>
+			</div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			Reveal.initialize({
+				rollingLinks: false,
+				controls: false,
+				progress: true,
+				history: true,
+				theme: 'beige', 
+				transition: 'linear', 
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/groovy.js', async:true },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
