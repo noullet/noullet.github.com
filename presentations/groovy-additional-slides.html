@@ -9,6 +9,9 @@
 		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 		<link rel="stylesheet" href="lib/css/idea.css">
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -21,70 +24,23 @@
 			<div class="slides">
 
 				<section>
-					<h2>Dynamisez votre code Java avec</h2>
-					<input type="image" src="img/logo-groovy.png" style="width:400px"/>
-					<p style="margin-top:50px">Nicolas Noullet</p>
-					<p><b>Human Talks Toulouse</b></p>
-				</section>
-
-				<section>
-					<h2>Groovy</h2>
-					<p>2003</p>
-					<p>Open Source</p>
-					<input type="image" src="img/logo-springsource.gif"/>
-					<p>Français ?<p>
-				</section>
-
-				<section>
-					<h2>Et Java dans tout ça ?</h2>
-					<p>Java Virtual Machine
-					<p>Java Community Process</p>
-				</section>
-
-				<section>
-					<h2>Dynamique</h2>
-					<pre><code class="groovy">
-	def foo
-	foo = "bar"
-	foo += "baz"
-	assert foo == "barbaz"
-	foo = 1
-	foo ++
-	assert foo == 2
-				</code></pre>
-				</section>
-
-				<section>
-					<h2>Statique</h2> Wait, what?
-				</section>			
-
-				<section>
 					<h2>Fonctionnel ?</h2>
+					<pre><code class="groovy">
+	import groovy.transform.*
+
+	@Immutable class Cat {
+	    def nickname
+	    def wantsToKillYou = true
+	}
+					</code></pre>
+					<pre><code class="groovy">
+	def ajouteur = { nombre ->
+	    return { valeur -> valeur + nombre }
+	}
+	def ajoute10 = ajouteur(10)
+	assert ajoute10(1) == 11
+					</code></pre>
 				</section>		
-
-				<section>
-					<h2>Collections</h2>
-				</section>
-
-				<section>
-					<h2>Opérateurs</h2>
-				</section>
-
-				<section>
-					<h2>Riche</h2>
-					<p>Tests</p>
-					<p>Parsers &amp; Builders</p>
-					<p>Grapes</p>
-					<p>GPars</p>
-					<p>GContracts</p>
-				</section>
-
-				<section>
-					<h2>Agile</h2>
-					<p>Adaptable : dynamique, compatible, DSL</p>
-					<p>Simple : syntaxe légère, concepts simples</p>
-					<p>Productif</p>
-				</section>
 
 				<section>
 					<h2>Écosystème</h2>
@@ -94,20 +50,6 @@
 					<input type="image" src="img/logo-gradle.png" style="width:200px"><br/>
 					<p>Spock, Geb</p>
 					<p>&lt;insert any Java lib/framework here&gt;</p>
-				</section>
-
-				<section>
-					<h2>Lancez-vous !</h2>
-					<input type="image" src="img/lancez-vous.gif" style="width:350px"/>
-					<p><a href="http://groovy.codehaus.org/">http://groovy.codehaus.org/</a></p>
-				</section>
-
-				<section>
-					<h2>Merci :)</h2>
-					<input type="image" src="img/logo-kagilum.png" style="width:300px"/>
-					<br/>
-					<input type="image" src="img/logo-icescrum.png" style="width:285px;margin-top:-100px"/>
-					<p style="margin-top:-50px">@noullet</p>
 				</section>
 			</div>
 			
