@@ -124,7 +124,7 @@
 
    	list.each { print it } // output : fooobarbazzz
 
-   	assert list.find { it.startsWith("f") } == "fooo"
+   	assert list.find { it =~ /o/ } == "fooo"
 					</code></pre>
 					<p>findAll, sort, collect, groupBy, revert, unique...</p>
 				</section>
