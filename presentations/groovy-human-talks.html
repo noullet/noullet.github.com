@@ -32,14 +32,16 @@
 
 				<section>
 					<h2>Groovy</h2>
-					<p>2003</p><br/>
-					<input type="image" src="img/logo-springsource.gif"/><br/><br/>
+					<p>2003</p>
+					<p>bytecode Java => JVM</p>
 					<p>Français ?<p>
 				</section>
 
 				<section>
 					<h2>Remplacer Java ?</h2>
-					<p><b>Groovy, c'est du Java !</b></p>
+					<p>Du Java, c'est du Groovy ! (presque)</p>
+					<input type="image" src="img/venn-groovy-java.png" style="width:300px"/>
+					<p>Courbe apprentissage</p>
 				</section>
 
 				<section>
@@ -87,8 +89,9 @@
 				<section>
 					<h2>Classes made even easier</h2>
 					<pre><code class="groovy">
-	@groovy.transform.Canonical 
-	class Cat {
+	import groovy.transform.*
+
+	@Canonical class Cat {
 	    def nickname
 	    def isPlottingToKillYou
 	}
@@ -103,26 +106,35 @@
 
 				<section>
 					<h2>Collections</h2>
+					<pre><code class="groovy">
+	def list = [] // java.util.List
+	list &lt;&lt; "baz"
+	assert list[0] == "baz"
+
+	def map = [:] // java.util.Map
+	map &lt;&lt; [foo:"bar"]
+	assert map["foo"] == "bar"
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>Opérateurs</h2>
+					<h2>Collections : plus fort</h2>
+					<pre><code class="groovy">
+	def list = ["fooo", "bar", "bazzz"]
+
+   	list.each { print it } // output : fooobarbazzz
+
+   	assert list.find { it.startsWith("f") } == "fooo"
+					</code></pre>
+					<p>findAll, sort, collect, groupBy, revert, unique...</p>
 				</section>
 
 				<section>
 					<h2>Riche</h2>
-					<p>Tests : unitaire, mocks, integration, fonctionnel</p>
-					<p>Parsers &amp; Builders : XML, JSON</p>
-					<p>Grapes</p>
-					<p>GPars</p>
+					<p>Tests</p>
+					<p>Parsers &amp; Builders</p>
+					<p>Gestion des dépendances, programmation //...
 					<p>&lt;insert any Java lib/framework here&gt;</p>
-				</section>
-
-				<section>
-					<h2>Agile</h2>
-					<p>Adaptable : dynamique, compatible Java, DSL</p>
-					<p>Simple</p>
-					<p>Productif</p>
 				</section>
 
 				<section>
